@@ -1,0 +1,35 @@
+src
+|
+
+|__ com.ltts.model (Two Model Class)
+
+|
+
+|__ com.ltts.Dao (Two DAO Class)
+
+|
+
+|_______public List getAll...()
+
+|
+
+|_______public getModelById(int id)
+
+|
+
+|_______public boolean insert(ModelClass mc)
+
+|
+
+|_______public boolean update(int id)|
+
+|__ com.ltts.Configuration (One Class MyConfiguration)
+
+|
+
+|__ use db.properties file
+
+|
+
+|_ com.ltts.main
+

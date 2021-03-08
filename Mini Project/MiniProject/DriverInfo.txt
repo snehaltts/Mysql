@@ -1,0 +1,44 @@
+Statment Types
+
+Type 1: ODBC -driver
+
+Operting System Specific
+
+Type 2: OCI – Drive (only)
+
+Driver for Specific databases – Oracle
+
+Type 3: Native Driver -
+
+Third party – Database independent; (Thick Driver)
+
+Type 4: Pure Driver
+
+(Thin Driver)
+
+Loading the Driver
+
+Provide the Connection (I)
+
+Connection c=DriverManager. getConnection(“”);
+
+Action / Statement
+Statement s=c.createStatement();
+
+If Buy – I have to Accommodate
+s.execute(“select *”);
+
+//Only for select
+
+ResultSet for getdata
+
+s.execute(“Insert”);
+
+Close the Connection.
+Statement 3 type
+
+Statement
+
+PreparedStatement
+
+CallableStatement
