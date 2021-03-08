@@ -1,0 +1,10 @@
+CREATE TRIGGER trgger AFTER INSERT, DELETE AS BEGIN SET NOCOUNT ON;
+INSERT INTO Details(
+name;
+Skill;        
+)
+SELECT 
+name;
+Skill;
+FROM Details 
+END
