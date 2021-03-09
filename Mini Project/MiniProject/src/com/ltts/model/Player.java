@@ -1,95 +1,135 @@
 package com.ltts.model;
 
-import java.util.Date;
+import java.sql.Date;
 
 public class Player {
-	private int pId;
+	private int PlayerId;
 	private String name;
-	private String dateOfBirth;
-	private String skill;
-	private int numberOfMatches;
+	private Date dateOfBirth;
+	private String nationality;
+	private String skills;
 	private int runs;
 	private int wickets;
-	private String nationality;
-	private double powerRating;
-	private int tId;
-
+	private int number_of_matches;
+	private int teamid;
+	
+	
 	public Player() {
 		super();
 	}
-	public Player(int pId, String name, String ppno, String skill, int numberOfMatches, int runs, int wickets,
-			String nationality, double powerRating, int tId) {
+
+
+	public Player(int player_id, String name, Date dateOfBirth, String nationality, String skills, int runs,
+			int wickets, int number_of_matches, int team_id) {
 		super();
-		this.pId = pId;
+		PlayerId = player_id;
 		this.name = name;
-		this.dateOfBirth = ppno;
-		this.skill = skill;
-		this.numberOfMatches = numberOfMatches;
+		this.dateOfBirth = dateOfBirth;
+		this.nationality = nationality;
+		this.skills = skills;
 		this.runs = runs;
 		this.wickets = wickets;
-		this.nationality = nationality;
-		this.powerRating = powerRating;
-		this.tId = tId;
+		this.number_of_matches = number_of_matches;
+		this.teamid = team_id;
 	}
+
+
+	public int getPlayer_id() {
+		return PlayerId;
+	}
+
+
+	public void setPlayer_id(int player_id) {
+		PlayerId = player_id;
+	}
+
+
 	public String getName() {
 		return name;
 	}
+
+
 	public void setName(String name) {
 		this.name = name;
 	}
-	public String getDateOfBirth() {
+
+
+	public Date getDateOfBirth() {
 		return dateOfBirth;
 	}
-	public void setDateOfBirth(String dateOfBirth) {
+
+
+	public void setDateOfBirth(Date dateOfBirth) {
 		this.dateOfBirth = dateOfBirth;
 	}
-	public String getSkill() {
-		return skill;
-	}
-	public void setSkill(String skill) {
-		this.skill = skill;
-	}
-	public int getNumberOfMatches() {
-		return numberOfMatches;
-	}
-	public void setNumberOfMatches(int numberOfMatches) {
-		this.numberOfMatches = numberOfMatches;
-	}
-	public int getRuns() {
-		return runs;
-	}
-	public void setRuns(int runs) {
-		this.runs = runs;
-	}
-	public int getWickets() {
-		return wickets;
-	}
-	public void setWickets(int wickets) {
-		this.wickets = wickets;
-	}
+
+
 	public String getNationality() {
 		return nationality;
 	}
+
+
 	public void setNationality(String nationality) {
 		this.nationality = nationality;
 	}
-	public double getPowerRating() {
-		return powerRating;
+
+
+	public String getSkills() {
+		return skills;
 	}
-	public void setPowerRating(double powerRating) {
-		this.powerRating = powerRating;
+
+
+	public void setSkills(String skills) {
+		this.skills = skills;
 	}
-	public int getPId() {
-		return pId;
+
+
+	public int getRuns() {
+		return runs;
 	}
-	public void setPId(int pId) {
-		this.pId = pId;
+
+
+	public void setRuns(int runs) {
+		this.runs = runs;
 	}
-	public int getTId() {
-		return tId;
+
+
+	public int getWickets() {
+		return wickets;
 	}
-	public void setTeamId(int tId) {
-		this.tId = tId;
+
+
+	public void setWickets(int wickets) {
+		this.wickets = wickets;
 	}
+
+
+	public int getNumber_of_matches() {
+		return number_of_matches;
+	}
+
+
+	public void setNumber_of_matches(int number_of_matches) {
+		this.number_of_matches = number_of_matches;
+	}
+
+
+	public int getTeam_id() {
+		return teamid;
+	}
+
+
+	public void setTeam_id(int team_id) {
+		this.teamid = team_id;
+	}
+
+
+	@Override
+	public String toString() {
+		return "Player [Player_id=" + PlayerId + ", name=" + name + ", dateOfBirth=" + dateOfBirth + ", nationality="
+				+ nationality + ", skills=" + skills + ", runs=" + runs + ", wickets=" + wickets
+				+ ", number_of_matches=" + number_of_matches + ", team_id=" + teamid + "]";
+	}
+	
 
 }
