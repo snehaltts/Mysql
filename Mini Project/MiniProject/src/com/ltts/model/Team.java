@@ -1,59 +1,50 @@
 package com.ltts.model;
 
 public class Team {
-	
-	private int tId;
-	private String tName;
-	private String ownerName;
-	private String coach;
-	private int captainId;
-	
+	private int teamid;
+	private String teamname;
+    private String ownername;
+    private String coachname;
 	public Team() {
 		super();
+		// TODO Auto-generated constructor stub
 	}
-	public Team(int tId, String tName, String ownerName, String coach, int captainId) {
+	public Team(int teamid, String teamname, String ownername, String coachname) {
 		super();
-		this.tId = tId;
-		this.tName = tName;
-		this.ownerName = ownerName;
-		this.coach = coach;
-		this.captainId = captainId;
+		this.teamid = teamid;
+		this.teamname = teamname;
+		this.ownername = ownername;
+		this.coachname = coachname;
 	}
-	public int getTId() {
-		return tId;
+	public int getTeam_id() {
+		return teamid;
 	}
-	public void setTId(int tId) {
-		this.tId = tId;
+	public void setTeam_id(int teamid) {
+		this.teamid = teamid;
 	}
-	public String getTName() {
-		return tName;
+	public String getTeamname() {
+		return teamname;
 	}
-	public void setTName(String tName) {
-		this.tName = tName;
+	public void setTeamname(String teamname) {
+		this.teamname = teamname;
 	}
-
-	public String getOwnerName() {
-		return ownerName;
+	public String getOwnername() {
+		return ownername;
 	}
-
-	public void setOwnerName(String ownerName) {
-		this.ownerName = ownerName;
+	public void setOwnername(String ownername) {
+		this.ownername = ownername;
 	}
-
-	public String getCoach() {
-		return coach;
+	public String getCoachname() {
+		return coachname;
 	}
-
-	public void setCoach(String coach) {
-		this.coach = coach;
+	public void setCoachname(String coachname) {
+		this.coachname = coachname;
 	}
-
-	public int getCaptainId() {
-		return captainId;
+	@Override
+	public String toString() {
+		return "Team [teamid=" + teamid + ", teamname=" + teamname + ", ownername=" + ownername + ", coachname="
+				+ coachname + "]";
 	}
-
-	public void setCaptainId(int captainId) {
-		this.captainId = captainId;
-	}
-	
+    
+    
 }
