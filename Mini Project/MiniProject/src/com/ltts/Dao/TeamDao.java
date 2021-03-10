@@ -24,8 +24,8 @@ public class TeamDao {
 		Connection c= MyConnection.getConnection();
 		
 		PreparedStatement ps= c.prepareStatement("insert into team values(?,?,?,?)");
-		ps.setInt(1,t.getTeam_id());
-		ps.setString(2, t.getTeamname());
+		ps.setInt(1,t.getT_id());
+		ps.setString(2, t.getTname());
 		ps.setString(3, t.getOwnername());
 		ps.setString(4, t.getCoachname());
 		return ps.execute();
@@ -34,7 +34,7 @@ public class TeamDao {
 	public boolean updateTeam(int id,String name) throws Exception
 	{
 		Connection c= MyConnection.getConnection();
-		PreparedStatement ps= c.prepareStatement("UPDATE team SET teamname=? WHERE team_id=?");
+		PreparedStatement ps= c.prepareStatement("UPDATE team SET teamname=? WHERE t_id=?");
 		ps.setString(1, name);
 		ps.setInt(2, id);
 		System.out.println("Data Updated Succesfully");
@@ -44,7 +44,7 @@ public class TeamDao {
 	public void teamPlayer(String tname) throws Exception
 	{
 		Connection c= MyConnection.getConnection();
-		PreparedStatement ps=c.prepareStatement("Select * from player as p, team as t where p.teamid=t.teamid AND t.teamname=? ;");
+		PreparedStatement ps=c.prepareStatement("Select * from player as p, team as t where p.tid=t.tid AND t.name=? ;");
 		ps.setString(1, tname);
 		ResultSet rs=ps.executeQuery();
 		while(rs.next())
@@ -57,7 +57,7 @@ public class TeamDao {
 	public void skillPlayer(String tname, String tskill) throws Exception
 	{
 		Connection c= MyConnection.getConnection();
-		PreparedStatement ps=c.prepareStatement("Select * from player as p, team as t where p.teamid=t.teamid AND t.teamname=? AND p.skills=? ;");
+		PreparedStatement ps=c.prepareStatement("Select * from player as p, team as t where p.tid=t.tid AND t.tname=? AND p.skills=? ;");
 		ps.setString(1, tname);
 		ps.setString(2, tskill);
 		ResultSet rs=ps.executeQuery();
