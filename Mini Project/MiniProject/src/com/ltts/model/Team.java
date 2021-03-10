@@ -1,32 +1,32 @@
 package com.ltts.model;
 
 public class Team {
-	private int teamid;
-	private String teamname;
+	private int tid;
+	private String tname;
     private String ownername;
     private String coachname;
 	public Team() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public Team(int teamid, String teamname, String ownername, String coachname) {
+	public Team(int tid, String tname, String ownername, String coachname) {
 		super();
-		this.teamid = teamid;
-		this.teamname = teamname;
+		this.tid = tid;
+		this.tname = tname;
 		this.ownername = ownername;
 		this.coachname = coachname;
 	}
-	public int getTeam_id() {
-		return teamid;
+	public int getT_id() {
+		return tid;
 	}
-	public void setTeam_id(int teamid) {
-		this.teamid = teamid;
+	public void setT_id(int tid) {
+		this.tid = tid;
 	}
-	public String getTeamname() {
-		return teamname;
+	public String getTname() {
+		return tname;
 	}
-	public void setTeamname(String teamname) {
-		this.teamname = teamname;
+	public void setTname(String tname) {
+		this.tname = tname;
 	}
 	public String getOwnername() {
 		return ownername;
@@ -40,9 +40,9 @@ public class Team {
 	public void setCoachname(String coachname) {
 		this.coachname = coachname;
 	}
-	@Override
+	
 	public String toString() {
-		return "Team [teamid=" + teamid + ", teamname=" + teamname + ", ownername=" + ownername + ", coachname="
+		return "Team [tid=" + tid + ", tname=" + tname + ", ownername=" + ownername + ", coachname="
 				+ coachname + "]";
 	}
     
