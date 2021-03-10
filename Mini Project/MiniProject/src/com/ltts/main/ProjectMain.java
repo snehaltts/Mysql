@@ -13,13 +13,13 @@ public class ProjectMain {
 	public static void main(String[] args) throws Exception {
 		BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
 		while(true) {
-		System.out.println("Enter Your Choice"); 
-		System.out.println("1. Insert Details"); 
-		System.out.println("2. Search "); 
-		System.out.println("3. Update Player Details"); 
-		System.out.println("4. View all the Players"); 
+		System.out.println("Enter your choice"); 
+		System.out.println("1.Insert details"); 
+		System.out.println("2.Search"); 
+		System.out.println("3.Update player details"); 
+		System.out.println("4.View all players"); 
 		//System.out.println("5. View Single Player"); 
-		System.out.println("5. Bye");
+		System.out.println("5.Close");
 		int n= Integer.parseInt(br.readLine());
 		
 		if(n==1)
@@ -61,7 +61,7 @@ public class ProjectMain {
 		}
 		else if(n==2)
 		{
-			System.out.println("Enter the Player Name: "); 
+			System.out.println("Enter player name: "); 
 			String name=br.readLine();
 			PlayerDao pd=new PlayerDao();
 		    pd.getAll(name);
@@ -98,7 +98,7 @@ public class ProjectMain {
 		else if(n==5)
 		{
 			System.out.println("1. View team's players");
-			System.out.println("2. View Players based on Skills & Team");
+			System.out.println("2. View players based on Skills & Team");
 			int v=Integer.parseInt(br.readLine());
 			if(v==1)
 			{
@@ -111,7 +111,7 @@ public class ProjectMain {
 			{
 				System.out.println("Enter Team Name: ");
 				String tname=br.readLine();
-				System.out.println("Enter Player Skill: ");
+				System.out.println("Enter player Skill: ");
 				String tskill=br.readLine();
 				TeamDao pd=new TeamDao();
 			    pd.skillPlayer(tname,tskill);
