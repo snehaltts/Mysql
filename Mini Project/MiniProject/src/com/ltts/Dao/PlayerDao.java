@@ -70,7 +70,7 @@ public class PlayerDao {
 	public void showPlayer() throws Exception
 	{
 		Connection c= MyConnection.getConnection();
-		PreparedStatement ps=c.prepareStatement("Select * from Player;");
+		PreparedStatement ps=c.prepareStatement("Select * from player;");
 		ps.execute();
 		ResultSet rs=ps.executeQuery();
 		while(rs.next())
