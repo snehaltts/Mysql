@@ -26,7 +26,7 @@ public class PlayerDao {
 	{
 		Connection c= MyConnection.getConnection();
 		PreparedStatement ps= c.prepareStatement("insert into player values(?,?,?,?,?,?,?,?,?)");
-		ps.setInt(1, p.getPlayer_id());
+		ps.setInt(1, p.getP_id());
 		ps.setString(2, p.getName());
 		ps.setDate(3,(Date) p.getDateOfBirth());
 		ps.setString(4, p.getNationality());
@@ -34,7 +34,7 @@ public class PlayerDao {
 		ps.setInt(6, p.getRuns());
 		ps.setInt(7, p.getWickets());
 		ps.setInt(8, p.getNumber_of_matches());
-		ps.setInt(9, p.getTeam_id());
+		ps.setInt(9, p.getT_id());
 		System.out.println("Data Inserted Succesfully");
 		return ps.execute();
 		
@@ -43,7 +43,7 @@ public class PlayerDao {
 	public void getAll(String name) throws Exception
 	{
 		Connection c= MyConnection.getConnection();
-		PreparedStatement ps=c.prepareStatement("Select p.name,t.teamname,t.coachname,TIMESTAMPDIFF(YEAR, dateOfBirth, CURDATE()) AS age from player as p inner join team as t on p.teamid=t.teamid where p.name=?");
+		PreparedStatement ps=c.prepareStatement("Select p.name,t.teamname,t.coachname,TIMESTAMPDIFF(YEAR, dateOfBirth, CURDATE()) AS age from player as p inner join team as t on p.tid=t.tid where p.name=?");
 		ps.setString(1, name);
 		ResultSet rs=ps.executeQuery();
 		while(rs.next())
@@ -60,7 +60,7 @@ public class PlayerDao {
 	public boolean updatePlayer(int id,String name) throws Exception
 	{
 		Connection c= MyConnection.getConnection();
-		PreparedStatement ps= c.prepareStatement("UPDATE player SET name=? WHERE playerid=?");
+		PreparedStatement ps= c.prepareStatement("UPDATE player SET name=? WHERE pid=?");
 		ps.setString(1, name);
 		ps.setInt(2, id);
 		System.out.println("Data Updated Succesfully");
@@ -70,7 +70,7 @@ public class PlayerDao {
 	public void showPlayer() throws Exception
 	{
 		Connection c= MyConnection.getConnection();
-		PreparedStatement ps=c.prepareStatement("Select * from player;");
+		PreparedStatement ps=c.prepareStatement("Select * from Player;");
 		ps.execute();
 		ResultSet rs=ps.executeQuery();
 		while(rs.next())
